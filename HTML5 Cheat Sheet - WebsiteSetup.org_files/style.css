@@ -1,0 +1,885 @@
+/*
+Theme Name: Website Setup - rolzan
+Theme URI: http://rolzan.com
+Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
+Version: 4.1.0
+Author: rolzan
+Author URI: http://rolzan.com
+Tags: black, white, one-column, two-columns, flexible-width, custom-background, custom-colors, custom-menu, full-width-template, theme-options
+License: GNU General Public License v2.0 & Apache License 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+@font-face {
+	font-family: 'AvenirNextLTPro-Bold';
+	src: url('webfonts/30D0A1_0_0.eot');
+	src: url('webfonts/30D0A1_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/30D0A1_0_0.woff2') format('woff2'),url('webfonts/30D0A1_0_0.woff') format('woff'),url('webfonts/30D0A1_0_0.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'AvenirNextLTPro-Regular';
+	src: url('webfonts/30E7C1_0_0.eot');
+	src: url('webfonts/30E7C1_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/30E7C1_0_0.woff2') format('woff2'),url('webfonts/30E7C1_0_0.woff') format('woff'),url('webfonts/30E7C1_0_0.ttf') format('truetype');
+}
+
+/* HEADS UP: Everything that you will normally find here can be found in the library/less/wp.less */
+body {
+	color: #000;
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+	letter-spacing: -0.9px;
+	line-height: 1;
+}
+h2, .h2 {
+	font-size: 35px;
+}
+h3, .h3 {
+	font-size: 27px;
+}
+h4, .h4 {
+	font-size: 23px;
+}
+a {
+	word-wrap: break-word;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.bottom-footer {
+	color: #666;
+}
+.form-control {
+	width: 100% !important;
+}
+.front-page .step-one,
+.front-page .step-two,
+.front-page .step-three {
+  background-color: #fff !important;
+}
+.front-about .page-title {
+	word-wrap: break-word;
+}
+.front-about {
+	color: #333;
+}
+.faq-banner h3 {
+	word-wrap: break-word;
+}
+.front-banner {
+	background-color: #3a4b5d !important;
+	background-image: url(http://websitesetup.org/wp-content/uploads/2015/04/pattern.jpg) !important;
+	background-repeat: repeat !important;
+	background-size: inherit !important;
+	border-bottom: 1px solid #3a4b5d;
+}
+.front-page .guide-steps {
+	background-color: #3a4b5d !important;
+	background-image: url(http://websitesetup.org/wp-content/uploads/2015/04/pattern.jpg) !important;
+	background-repeat: repeat !important;
+	background-size: inherit !important;
+	border-top: 1px solid #3a4b5d;
+	border-bottom: 1px solid #3a4b5d;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.front-page .guide-steps p.lead,
+.front-page .other-guides p.lead {
+	color: #b3cada;
+}
+.front-page .other-guides {
+	background-color: #3a4b5d !important;
+	background-image: url(http://websitesetup.org/wp-content/uploads/2015/04/pattern.jpg) !important;
+	background-repeat: repeat !important;
+	background-size: inherit !important;
+	border-top: 1px solid #3a4b5d;
+	border-bottom: 1px solid #3a4b5d;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	font-size: 14px;
+}
+.front-page .other-guides a img {
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+.front-page .other-guides a img:hover {
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
+.front-page .other-guides-inner > div .page-title {
+	font-size: 22px;
+}
+.navbar-brand {
+	float: none;
+	margin-top: -20px;
+	padding-bottom: 0;
+	padding-right: 0;
+	line-height: auto;
+}
+.site-info {
+	max-width: 290px;
+}
+.site-description {
+	margin-bottom: 0;
+	font-size: 16px;
+	color: #fff;
+	padding-left: 15px;
+}
+
+.front-testimonials,
+.front-love {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.front-testimonials header h2,
+.front-love header h2 {
+	margin-top: 0;
+}
+.front-testimonials {
+	background-color: #f5f5f5;
+}
+.front-love h3 {
+	margin-top: 10px;
+}
+
+.front-page .step-one,
+.front-page .step-two {
+	padding-bottom: 0;
+}
+.front-page .step-one .step-content img,
+.front-page .step-two .step-content img {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.front-page .front-brands {
+	padding: 10px 0;
+	background-color: #1f282e;
+	box-shadow: inset 0 10px 15px rgba(0,0,0,0.15);
+  	-webkit-box-shadow: inset 0 10px 15px rgba(0,0,0,0.15);
+}
+.front-page .front-banner .page-title {
+	margin-bottom: 0;
+}
+.front-page .front-banner .hero-par {
+	color: #b3cada;
+}
+.front-love {
+	background-color: #e5e5e5;
+}
+.front-love-inner > header {
+	border-bottom: 1px solid #cecece;
+}
+.front-love-inner > div {
+	padding: 40px 0 30px;
+	border-top: 1px solid #f3f3f3;
+	border-bottom: 1px solid #cecece;
+}
+.front-love-inner > footer {
+	border-top: 1px solid #f3f3f3;
+	padding-top: 40px;
+}
+.front-love-inner > footer > div {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.site-footer {
+	font-size: 14px;
+	background-color: #1f282e;
+	box-shadow: inset 0 10px 15px rgba(0,0,0,0.15);
+  	-webkit-box-shadow: inset 0 10px 15px rgba(0,0,0,0.15);
+  	padding: 20px 0 0;
+}
+.site-footer #inner-footer {
+	border-bottom: 1px solid #192126;
+}
+.bottom-footer {
+	padding-top: 0;
+	padding-bottom: 10px;
+	background-color: #1f282e;
+}
+.bottom-footer-inner {
+	padding-top: 10px;
+	border-top: 1px solid #273138;
+}
+.bottom-footer .attribution {
+	text-align: center;
+	color: #b3cada;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+.bottom-footer .attribution a {
+	color: #b3cada;
+}
+
+/* Comments */
+#comment-nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+ol.commentlist, ol.commentlist ul.children {
+    list-style-type: none;
+    padding-left: 0;
+}
+ol.commentlist {
+	margin: 30px 0 0;
+}
+ol.commentlist li {
+	background: transparent;
+	padding-right: 0;
+}
+ol.commentlist ul.children li {
+	background: transparent !important;
+}
+.entry-comments,
+.entry-pings,
+.comment-respond {
+	border-top: 1px solid #ddd;
+	background-color: transparent;
+	max-width: 850px;
+	margin: 0 auto 20px;
+}
+.comment-header {
+	font-size: 1rem;
+	position: relative;
+}
+.comment-author {
+	margin-bottom: 0
+}
+ol.commentlist time {
+	font-size: 12px;
+}
+.comment-respond {
+	border-top: 1px solid #ddd;
+	background-color: transparent;
+}
+
+.comment-respond,
+.entry-pings {
+	padding: 40px 0;
+}
+
+.entry-comments {
+	padding: 40px 0;
+}
+.comment-edit-link {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	font-size: 12px;
+}
+
+.avatar {
+	float: left;
+}
+.comment .avatar {
+	margin: 0 16px 24px 0;
+}
+.comment-author img {
+    border-radius: 50%;
+}
+
+.comment-content {
+	clear: both;
+	background-color: #fff;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+    padding: 20px 30px;
+    margin-bottom: 5px;
+}
+ol.commentlist li.bypostauthor,
+.bypostauthor .comment-content {
+	border-color: #B2C6FF;
+	background: transparent;
+}
+.comment-content p {
+	font-size: 14px;;
+    margin: 0 0 20px;
+}
+.comment-content p:last-child {
+	margin: 0;
+}
+.commentlist li {
+	margin-top: 10px;
+	padding: 0;
+}
+.commentlist li li {
+	padding-left: 24px;
+}
+.comment-reply {
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+a.comment-reply-link {
+	position: static;
+  display: inline;
+  text-align: inherit;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 1.428571429;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #00aeef;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 14px;
+}
+a.comment-reply-link:hover,
+a.comment-reply-link:focus,
+a.comment-reply-link:active {
+	background: transparent;
+	text-decoration: underline;
+	color: #00aeef;
+}
+.comment-author .comment-author-link,
+.comment-author span[itemprop="name"] {
+    font-size: 18px;
+    font-weight: bold;
+    color: #38424b;
+}
+.comment-meta {
+    margin-top: -5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.comment-meta a,
+ol.commentlist a.comment-edit-link {
+    padding: 0;
+	color: #bdc3c7;
+}
+.comment-meta a:hover {
+    color: #95a5a6;
+}
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 50%;
+}
+
+.comment-respond label {
+	display: block;
+	margin-right: 12px;
+}
+
+.entry-comments .comment-author {
+	margin-bottom: 0;
+}
+.comment-form-comment label {
+	display: none;
+}
+
+.entry-pings .reply {
+	display: none;
+}
+
+.bypostauthor {
+}
+
+.form-allowed-tags {
+	background-color: #f5f5f5;
+	font-size: 16px;
+	padding: 24px;
+}
+.comment-respond {
+	margin: 0;
+	width: 100%;
+	border: none;
+}
+#comments,
+.comment-reply-title {
+	font-size: 18px;
+}
+#main .commentlist article {
+	padding: 0;
+}
+
+/* Author Styles */
+.author-intro-container {
+	text-align: center;
+}
+.author-intro {
+	display: inline-block;
+	text-align: left;
+}
+.author-image {
+	float: none;
+	margin: 0 auto;
+}
+.author-message {
+	position: relative;
+	float: none;
+	clear: both;
+	width: 90%;
+	padding: 10px 15px;
+	margin: 20px auto 0;
+	background: #1f282e;
+}
+.author-arrow {
+	position: absolute;
+	bottom: 100%;
+	margin: 0 0 0 -10px;
+	left: 50%;
+
+	width: 0;
+	height: 0;
+	border-top: none;
+	border-bottom: 17px solid #1f282e;
+
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+.author-message p {
+	font-size: 14px;
+	color: #d8d8d8;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.author-message p:last-of-type {
+	margin-bottom: 0;
+}
+.author-name {
+	position: absolute;
+	top: 100%;
+	left: 15px;
+	margin-top: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #d8d8d8;
+	text-transform: uppercase;
+}
+
+.side-meta .avatar {
+	max-width: 40%;
+	float: left;
+}
+.side-meta-text {
+	max-width: 60%;
+	float: left;
+	line-height: 1;
+}
+.side-meta h6 {
+	margin: 10px 0 0 10px;
+}
+.side-meta time {
+	line-height: 1;
+	margin: 5px 0 0 10px;
+	font-size: 12px;
+}
+.side-meta .essb_links {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+.navbar-header {
+	padding: 0;
+	background-color: transparent
+}
+.navbar-brand {
+	float: left;
+	margin-top: 0;
+	padding-top: 10px;
+}
+.navbar-default {
+  background-color: #1f282e;
+  color: #555;
+  border: none;
+  margin-bottom: 0;
+  box-shadow: inset 0 -7px 10px rgba(0,0,0,0.15);
+  -webkit-box-shadow: inset 0 -7px 10px rgba(0,0,0,0.15);
+  border-bottom: 1px solid #3a4b5d;
+}
+.navbar-nav {
+	margin-top: 0;
+}
+.navbar-default .navbar-nav>li>a {
+	font-weight: 600;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.5) !important;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	text-decoration: underline;
+	background-color: transparent;
+}
+@media (min-width: 768px) {
+	.site-description {
+		padding-left: 0;
+	}
+	.front-testimonials,
+	.front-love {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	/* Author styles */
+	.author-image {
+		float: left;
+	}
+	.author-message {
+		position: relative;
+		float: left;
+		clear: right;
+		width: 500px;
+		padding: 10px 15px;
+		margin: 0 0 0 30px;
+		background: #1f282e;
+	}
+	.author-arrow {
+		position: absolute;
+		top: 70px;
+		right: 100%;
+		left: auto;
+		bottom: auto;
+
+		margin: -10px 0 0 0;
+
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: none;
+		border-right: 17px solid #1f282e;
+	}
+}
+
+/* Plugins hack */
+.wpex-big {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+/**
+ *  Codeable changes - Tweets in Banner - 31/03/2015
+ */
+.front-page .front-banner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.front-page .front-banner .text-center{
+	margin-bottom:40px;
+}
+
+.front-page .front-banner .messages iframe{
+	margin:10px auto!important;
+	border:none!important;
+	box-shadow:none!important;
+	font-size:14px!important;
+	line-height:20px!important;
+}
+
+
+blockquote.twitter-tweet {
+  font-size: 12px!important;
+  font-weight: bold;
+  line-height: 16px!important;
+}
+
+blockquote.twitter-tweet p,  .front-page .front-banner .messages .e-entry-title {
+  font-size: 14px!important;
+  font-weight: normal!important;
+  line-height: 18px!important;
+}
+
+/**
+ *  End Codeable changes - Tweets in Banner - 31/03/2015
+ */
+
+.about-page .about-me {
+	background-color: #1f282e !important;
+	background-image: url(http://websitesetup.org/wp-content/uploads/2015/04/author-dark-4.jpg) !important;
+}
+.new-here-page .new-banner,
+.faq-page .faq-banner,
+.page-banner {
+	background-color: #3a4b5d !important;
+	background-image: url(http://websitesetup.org/wp-content/uploads/2015/04/pattern.jpg) !important;
+	background-repeat: repeat !important;
+	background-size: inherit !important;
+	border-bottom: 1px solid #3a4b5d;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.right-sidebar {
+	font-family: 'AvenirNextLTPro-Regular', sans-serif;
+	margin: 40px 0;
+}
+.right-sidebar .side-meta {
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+.right-sidebar .page-title {
+	text-transform: none;
+	text-shadow: none !important;
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.right-sidebar .h1,
+.right-sidebar h1,
+.right-sidebar .h2,
+.right-sidebar h2,
+.right-sidebar .h3,
+.right-sidebar h3,
+.right-sidebar .h4,
+.right-sidebar h4,
+.right-sidebar .h5,
+.right-sidebar h5,
+.right-sidebar .h6,
+.right-sidebar h6 {
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.right-sidebar strong em,
+.right-sidebar em strong {
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.right-sidebar b,
+.right-sidebar strong {
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.right-sidebar .sidebar-content {
+	clear: both;
+	padding-top: 20px;
+	font-size: 14px;
+}
+.right-sidebar .back-to-top {
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+	display: inline-block;
+	background: #4872a0;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 4px;
+	z-index: 99;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	opacity: 0.0;
+	transition: 0.3s opacity ease;
+	-webkit-transition: 0.3s opacity ease;
+}
+.right-sidebar .back-to-top.do-visible {
+	opacity: 1.0;
+}
+.testimonial-item {
+	background-color: #fff;
+	padding: 20px;
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 220px;
+	box-shadow: 0 5px 0 rgba(0,0,0,0.3);
+	margin-bottom: 20px;
+}
+.testimonial-item a {
+	color: #000;
+}
+.testimonial-item a:hover,
+.testimonial-item a:active,
+.testimonial-item a:focus {
+	text-decoration: none;
+}
+.testimonial-item > header {
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.testimonial-item img {
+	float: left;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+.testimonial-item .test-meta {
+	margin-top: 10px;
+}
+.testimonial-item .test-meta a p {
+	margin-bottom: 0;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.testimonial-item .test-meta a span	{
+	color: #3a4b5d;
+	font-weight: 600;
+	position: relative;
+	top: -3px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+
+	.testimonial-item {
+		font-size: 12px;
+	}
+	.testimonial-item img {
+		display: block;
+		float: none;
+		clear: both;
+		margin: 0 auto 10px;
+	}
+	.testimonial-item .test-meta {
+		text-align: center;
+	}
+
+}
+.page-title,
+p.lead,
+.hero-par,
+.widgettitle {
+	text-shadow: 0 2px 2px rgba(0,0,0,0.3) !important;
+}
+
+/* 6-6-2015 */
+.web-builders {
+	font-family: 'AvenirNextLTPro-Regular', sans-serif;
+	margin: 40px 0;
+}
+.web-builders .side-meta {
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+.web-builders .page-title {
+	text-transform: none;
+	text-shadow: none !important;
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.web-builders .h1,
+.web-builders h1,
+.web-builders .h2,
+.web-builders h2,
+.web-builders .h3,
+.web-builders h3,
+.web-builders .h4,
+.web-builders h4,
+.web-builders .h5,
+.web-builders h5,
+.web-builders .h6,
+.web-builders h6 {
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.web-builders strong em,
+.web-builders em strong {
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.web-builders b,
+.web-builders strong {
+	font-family: 'AvenirNextLTPro-Bold', 'Helvetica', sans-serif;
+	font-weight: normal
+}
+.web-builders .sidebar-content {
+	clear: both;
+	padding-top: 20px;
+	font-size: 14px;
+}
+.builder-page .back-to-top {
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+	display: inline-block;
+	background: #4872a0;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 4px;
+	z-index: 99;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	opacity: 0.0;
+	transition: 0.3s opacity ease;
+	-webkit-transition: 0.3s opacity ease;
+}
+.builder-page .back-to-top.do-visible {
+	opacity: 1.0;
+}
+.builder-banner {
+	background-color: #3a4b5d !important;
+	background-image: url(http://websitesetup.org/wp-content/uploads/2015/04/pattern.jpg) !important;
+	background-repeat: repeat !important;
+	background-size: inherit !important;
+	border-bottom: 1px solid #3a4b5d;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #fff;
+}
+.builder-banner .page-title {
+	color: #fff;
+	font-size: 30px;
+	text-transform: none;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+.builder-banner .lead {
+	color: #b3cada;
+	font-size: 14px;
+	margin-bottom: 0;
+	text-align: left;
+}
+.builder-banner .jump-links {
+	margin: 40px 0 0;
+}
+.builder-banner .jump-links .btn {
+	margin-bottom: 5px;
+	padding: 7px 20px;
+}
+.builder-banner .jump-links .btn-primary {
+	background-color: #4872a0;
+	color: #98b7d9;
+	font-size: 16px;
+}
+.builder-banner .jump-links .btn-primary:hover,
+.builder-banner .jump-links .btn-primary:focus,
+.builder-banner .jump-links .btn-primary:active {
+	background-color: #5384ba;
+}
+
+/* Shortcodes */
+.colored-box {
+	padding: 10px 15px;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+@media (min-width: 768px) {
+	.builder-banner {
+		background-color: #3a4b5d !important;
+		background-image: url(http://websitesetup.org/wp-content/uploads/2015/04/pattern.jpg) !important;
+		background-repeat: repeat !important;
+		background-size: inherit !important;
+		border-bottom: 1px solid #3a4b5d;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		color: #fff;
+	}
+	.builder-banner .page-title {
+		color: #fff;
+		font-size: 48px;
+		text-transform: none;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.builder-banner .lead {
+		font-size: 16px;
+		max-width: 750px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.builder-entry {
+		border: 1px solid #e5e5e5;
+		padding: 30px;
+	}
+	.builder-entry-title {
+		font-size: 24px;
+	}
+	.builder-entry-container {
+		max-width: 90%;
+	}
+}

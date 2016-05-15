@@ -1,0 +1,86 @@
+
+/* like this */
+body {
+	background-color: #F5D7E4;
+	background-image: url(../images/banana.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+ .main {
+ 	background-repeat: white;
+ 	background-color: rgba(255,255,2555,0.9);
+ 	width: 600px;
+ 	margin: 0 auto;
+ 	border-radius: 20px;
+ 	padding: 20px;
+ 	box-shadow: 0 0 20px 5px rgba(255,255,255,0.8)
+
+} 
+
+@media screen and (max-width: 768px) {
+	.main {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+h1 {
+	text-align: center;
+	color: #9645FF;
+	font-weight: normal;
+	font-family: 'Oxygen', sans-serif;
+	text-shadow: 4px 4px 10px #9645FF;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+
+}
+
+h2 {
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	border: 20px #9645FF;
+	border-radius: 50%;
+
+}
+
+h3 {
+	text-align: center;
+	font-size: 24px;
+	cursor: pointer;
+	margin-bottom: 0;
+	position: left margin-bottom; 
+}
+h3:hover {
+	text-decoration: underline;
+}
+p,
+ul,
+ol {
+	list-style: none;
+	line-height:1.7;
+	padding-left: 0;
+}
+a {
+	color: #ff00cc;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #aa0066
+	text-decoration: underline;
+}	
+
+
